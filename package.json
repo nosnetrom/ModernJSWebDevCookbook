@@ -19,14 +19,19 @@
   },
   "homepage": "https://github.com/nosnetrom/ModernJSWebDevCookbook#readme",
   "devDependencies": {
-    "eslint": "^6.2.2",
+    "babel-preset-flow": "^6.23.0",
+    "core-js": "^3.6.4",
+    "eslint": "^5.0.0",
     "eslint-config-recommended": "^4.0.0",
     "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-flowtype": "^4.6.0",
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-standard": "^4.0.1",
+    "flow": "^0.2.3",
+    "flow-bin": "^0.116.0",
     "prettier": "^1.19.1"
   },
   "dependencies": {
@@ -41,7 +46,12 @@
       "browser": true,
       "node": true
     },
-    "extends": "eslint:recommended",
+    "parser": "babel-eslint",
+    "extends": [
+      "eslint:recommended",
+      "plugin:flowtype/recommended"
+    ],
+    "plugins": "flowtype",
     "rules": {
       "no-console": "warn"
     }
