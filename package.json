@@ -6,6 +6,7 @@
   "scripts": {
     "build": "babel src -d out",
     "eslint": "eslint src",
+    "flow": "flow",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +19,12 @@
     "url": "https://github.com/nosnetrom/ModernJSWebDevCookbook/issues"
   },
   "homepage": "https://github.com/nosnetrom/ModernJSWebDevCookbook#readme",
+  "babel": {
+    "presets": [
+      "env",
+      "flow"
+    ]
+  },
   "devDependencies": {
     "babel-preset-flow": "^6.23.0",
     "core-js": "^3.6.4",
